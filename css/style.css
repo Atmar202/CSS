@@ -1,0 +1,237 @@
+:root {
+    --light-color: rgb(82,143,192);
+    --medium-color: #68445a70;
+    --dark-color:#70185a75;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-top {
+    position: relative;
+    z-index: 10;
+    background-color: chocolate;
+    padding: 2rem;
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    margin-bottom: -25vh;
+}
+
+.text-opacity {
+    color:wheat;
+    font-size: 2.8rem;
+    font-family: 'Lato', sans-serif;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, var(--dark-color), var(--medium-color)),url('../img/gamingPC.jpg');
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+}
+.text-box {
+    color: rgba(72, 221, 26, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 2rem;
+    animation-name: moveLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem;
+    margin: 2rem;
+    text-decoration: none;
+    border: 1px solid cyan;
+    opacity: 0;
+    color: rgba(145,214,42,0.8222);
+    animation-name: btn-opacity;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+
+    transition-property: transform;
+    transition-duration: 3s;
+}
+
+@keyframes btn-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.btn:hover {
+    transform: scale(1.2);
+}
+.btn-container {
+    text-align: center;
+}
+
+.about {
+    background-color: rgba(210, 105, 30, 0.925);
+    padding: 18rem 0;
+    margin-top: -25vh;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--dark-color), var(--light-color));
+    background-clip: text;
+    letter-spacing: 0.2rem;
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-1-of-2 {
+    float: left;
+    width: 50%;
+    padding: 1rem;
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.5rem;
+}
+
+.paragraph {
+    font-size: 1.4rem;
+}
+
+.btn-text:link, .btn-text:visited {
+    color: rgba(230, 211, 44, 0.932);
+    display: inline-block;
+    text-decoration: none;
+    border: 0.1rem solid var(--dark-color);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.btn-text:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.btn-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transform: translateY(0);
+}
+.composition {
+    float: right;
+}
+.photo_composition {
+    margin-right: 1.5rem;
+    width: 550px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+    border-radius: 2px;
+    outline: royalblue solid 1rem;
+    animation: offsetoutline 3s infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes offsetoutline {
+    50% {outline-offset: 25px;}
+}
+
+.contact {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--dark-color);
+    padding-top: 0.8rem;
+    padding-bottom: 0.3rem;
+    color: wheat;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.whitespace {
+    height: 25px;
+}
+
+.small-whitespace {
+    height: 12.5px;
+}
+
+.social a:hover {
+    background-color: var(--light-color);
+    border-radius: 50%;
+}
+
+.fa-instagram {
+    color: purple;
+}
+.fa-youtube {
+    color: red;
+}
+.fa-facebook-f {
+    color: blue;
+}
